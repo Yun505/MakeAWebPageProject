@@ -10,10 +10,10 @@ body{
     background-color:aliceblue;
     padding:20px;
     text-align:center;
-    text-size:16px;
+    font-size:16px;
 }
 p{
-    text-size:18px;
+    font-size:18px;
 }
 .column{
     float:left;
