@@ -1,0 +1,22 @@
+html{
+    font-family: 'Stick No Bills', sans-serif;
+    background-color:rgb(197, 248, 190);
+    box-sizing:border-box;
+}
+
+body{
+    text-align:center;
+    margin:0;
+}
+img{
+    max-width:600px;
+    max-height:600px;
+    display:block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    text-size:30px;
+}
