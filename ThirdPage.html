@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Webpage</title>
+        <meta charset = "utf-8">
+        <meta name="description" content=""">
+        <link href = "css/ThirdPage.css" rel = "stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h3>Edit/<i>Rant</i> about your favorite kpop groups!!!</h3>
+        <div id="container">
+            <div id="edit">
+                <p><b>Click</b> "Edit" button to edit content. </p>
+                <h3>The best group or groups are:</h3>
+                <ul>
+                    <li>meep</li>
+                </ul>
+                <p>They won numerous awards such as ...</p>
+                <ol>
+                    <li></li>
+                </ol>
+
+                <h3>They are well known for having <i>strong</i> vocals</h3>
+            </div>
+            <button type="submit" id="edit-button">Edit</button>
+            <button type="submit" id="end-editing">Done</button>
+          </div>
+
+        <h3>Add Song recs >:D</h3>
+        <input type="text">
+        <button id="add">Add</button>
+        <ul id="sob">
+        </ul>
+        <script>
+            const paragraph = document.getElementById("edit");
+            const edit_button = document.getElementById("edit-button");
+            const end_button = document.getElementById("end-editing");
+
+            edit_button.addEventListener("click", function() {
+                paragraph.contentEditable = true;
+                paragraph.style.backgroundColor = "#FFFFFF";
+            } );
+
+            end_button.addEventListener("click", function() {
+                paragraph.contentEditable = false;
+                paragraph.style.backgroundColor = "#c5f8be";
+            } );
+
+            function addToList(content){
+                let itemElm = document.createElement("li");
+                itemElm.textContent = content;
+                let listElm = document.querySelector("#sob");
+                listElm.appendChild(itemElm);
+            }
+
+            function getUserItem(){
+                let inputElm = document.querySelector("input");
+                //Only add to the list if not empty
+                if (inputElm.value !== "") {
+                    addToList(inputElm.value); 
+                }
+                else {
+                    alert("You can’t add a blank item to the list");
+                }
+                inputElm.value = ""; //clear the input box
+            }
+
+            let buttonElm = document.querySelector("#add");
+            buttonElm.addEventListener("click", getUserItem);
+        </script>
+    </body>
+</html>
